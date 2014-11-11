@@ -1,0 +1,2 @@
+I looked at router I have and found out some interesting things
+Couldn't find the spec so I didn't verity if I saw the right cache etc
