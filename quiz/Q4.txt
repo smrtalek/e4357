@@ -4,33 +4,33 @@ Q1: Implement the following inline functions:
 inline int CircularBufferIsFull(CircularBuffer* que) 
 inline int CircularBufferIsEmpty(CircularBuffer* que) 
 
-
+see hw6
 
 
 --------------------------------------------------------------------
 Q2: How to compute "Interrupt Latency"?
 
-
+DTrace the ISR and subtract return and entry timestamps 
 
 --------------------------------------------------------------------
 Q3: Serial pc(USBTX, USBRX); // tx, rx 
     What API (function) do you use to change the baud rate?
 
-
+pc.baud() from the serial object
 
 
 --------------------------------------------------------------------
 Q4: How many bit(s) does TDO have? Is TDO an input or output type? (Ref: JTAG Pins) 
 
-
-
+1
+input
 
 
 
 --------------------------------------------------------------------
 Q5:
-What is the address of ledArr[0]? 
-What is the address of ch? 
+What is the address of ledArr[0]? 0x2009C038 
+What is the address of ch? 0x0
 
 
 /* 

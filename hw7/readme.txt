@@ -54,3 +54,23 @@ How to create & appy a git patch?
 # change remote url
    git remote set-url origin git://new.url.here
    git push origin master:master
+
+
+output:
+root@E530-Ubuntu:~/e4357/hw7# luarocks list
+
+Installed rocks:
+----------------
+
+lpack
+  20070629-1 (installed) - /usr/local/lib/luarocks/rocks
+
+  luafilesystem
+    1.6.2-2 (installed) - /usr/local/lib/luarocks/rocks
+
+    luasocket
+      3.0rc1-1 (installed) - /usr/local/lib/luarocks/rocks
+
+      md5
+        1.2-1 (installed) - /usr/local/lib/luarocks/rocks
+

@@ -6,13 +6,13 @@
 /**< Circular Buffer Types */
 typedef unsigned char INT8U;
 typedef INT8U KeyType ;
-typedef struct {  
-    INT8U writePointer ; /**< write pointer */  
-    INT8U readPointer ;  /**< read pointer */  
+typedef struct {
+    INT8U writePointer ; /**< write pointer */
+    INT8U readPointer ;  /**< read pointer */
     INT8U size;         /**< size of circular buffer */
-    INT8U mask;         /**< bit Mask of circular buffer size*/   
+    INT8U mask;         /**< bit Mask of circular buffer size*/
     KeyType keys[0];    /**< Element of ciruclar buffer */
-} CircularBuffer ; 
+} CircularBuffer ;
 
 inline int CircularBufferIsFull(CircularBuffer* que)
 { }

@@ -16,3 +16,5 @@
 
 What is happening in the background?
 
+A request is sent to the server using HTTP(S), server processes it and sends back responce.
+

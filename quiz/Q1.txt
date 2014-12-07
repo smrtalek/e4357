@@ -4,18 +4,18 @@ Q1: Is there any compile error with the following code (if any)?
 
 	unsigned int Arr[16];
 	3[Arr] = 7; 
- 
+Yes
 Explain:
-
+3 can not be used as a variable
 
 
 
 --------------------------------------------------------------------
 Q2: What is the difference between the following 3 statements? 
 
-const int * px; 
-int const * px; 
-int * const px; 
+const int * px;  can't change int
+int const * px;  can't change int
+int * const px;  can't change pointer
 
 Is there any compile error for the following cases?
 case1: 
@@ -23,19 +23,25 @@ int x = 13;
 const int * px; 
 px = & x; 
 
+no
+
 case 2: 
 int x = 13; 
 int const * px; 
 px = & x; 
+
+no
 
 case 3: 
 int x = 13; 
 int * const px; 
 px = & x; 
 
+yes
+
 Explain:
 
-
+see Question 1
 
 
 
@@ -51,34 +57,30 @@ Q3: Write a function to set or clear ith bit of a 32-bit register.
 	Where ith (0-based) := {0, 1, 2, …, 31 } 
 void reg_set(volatile unsigned int * pReg, int ith) 
 { 
-
-
-
-
-
+	volatile unsigned int *tmp = *&pReg;
+	if(ith>-1 && ith<32) {
+		*tmp |= (0x1 << ith);
+		*&pReg=tmp;
+	}
 } 
 
 void reg_clear(volatile unsigned int * pReg, int ith) 
 { 
-
-
-
-
-
+	volatile unsigned int *tmp = *&pReg;
+	if(ith>-1 && ith<32) {
+		*tmp &= ~(0x1 << ith);
+		*&pReg=tmp;
+	}
 } 
 
 
 
 --------------------------------------------------------------------
 Q4: Write a swap function in C.
-void swap(unsigned int * px, unsigned int *py) { 
-
-
-
-
-
-
-
+void swap(unsigned int * px, unsigned int *py) { 	
+	unsigned int tmp = *px;
+	*px = *py;
+	*py = tmp;
 } 
 
 --------------------------------------------------------------------
@@ -89,10 +91,7 @@ unsigned int a0 = (unsigned int) &Arr[0];
 unsigned int a3 = (unsigned int) &Arr[3]; 
 printf(“%d\n”, a3 – a0); 
 
-
-
-
-
+12
 
 
 
